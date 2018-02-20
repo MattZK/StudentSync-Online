@@ -7,7 +7,7 @@ using JavaScript, HTML and CSS. It is based on [Node.js](https://nodejs.org/) an
 ## Quick start
 
 Clone and run the
-[MattZK/StudentSync-Electron](https://github.com/MattZK/StudentSync-Electron.git)
+[MattZK/StudentSync-Online](https://github.com/MattZK/StudentSync-Online.git)
 repository:
 
 ```sh
