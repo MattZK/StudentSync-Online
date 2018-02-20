@@ -1,0 +1,32 @@
+{
+  "name": "studentsync-online",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build"
+  },
+  "authors": [
+    "Matthias Willemsen",
+    "Jonas Van Hoof",
+    "Tom Meyers",
+    "Michiel Meurs"
+  ],
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "",
+    "babel-preset-env": "",
+    "browser-sync": "",
+    "gulp": "",
+    "gulp-babel": "",
+    "gulp-concat": "",
+    "gulp-imagemin": "",
+    "gulp-sass": "",
+    "gulp-sourcemaps": "",
+    "gulp-typescript": "",
+    "gulp-uglify": "",
+    "typescript": ""
+  }
+}
