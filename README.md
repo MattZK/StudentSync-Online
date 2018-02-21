@@ -22,4 +22,24 @@ To start a development server:
 gulp serve
 ```
 
+## Requirements
+
+* NodeJS v9.x
+* SASS Compiler
+* Gulp
+
+#### NodeJS
+[Download NodeJS](https://nodejs.org/en/)
+
+#### SASS
+[Download Ruby](https://rubyinstaller.org/) (Windows Only)
+```sh
+gem install sass
+```
+
+#### Gulp
+```sh
+npm install gulp-cli -g
+```
+
 *More info follows*
