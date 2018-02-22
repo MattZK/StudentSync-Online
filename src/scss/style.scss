@@ -1,7 +1,7 @@
 @import "reset";
 
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Francois One', sans-serif;
 }
 
 .page {
@@ -9,6 +9,8 @@ body {
 }
 
 header {
+  position: fixed;
+  width: 100%;
   nav {
     ul {
       list-style-type: none;
@@ -71,9 +73,11 @@ footer {
     font-family: 'Francois One', sans-serif;
   }
   .jumbotron {
-    background: url('../img/backgrounds/index.png') top center;
+    background: url('../img/backgrounds/index.jpeg') center center;
     -webkit-background-size: cover;
     background-size: cover;
+    height: 100vh;
+    padding-top: 30vh;
     p{
       font-family: 'Francois One', sans-serif;
       margin-top: 100px;
@@ -85,18 +89,19 @@ footer {
 }
 
 .login.page {
-  background: url('../img/backgrounds/login.jpg') center center fixed;
+  background: url('../img/backgrounds/index.jpeg') center center fixed;
   -webkit-background-size: cover;
   background-size: cover;
   form {
     height: 450px;
-    border-radius: 10%;
+    border-radius: 25px;
     text-align: center;
     background-color: #575555;
     position: absolute;
     top: 50% ;
     left: 50%;
     width: 400px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
     transform: translate(-50%,-50%);
     img{
       margin-top: 50px;
@@ -112,23 +117,28 @@ footer {
       font-family: 'Francois One', sans-serif;
       background-color: #575555;
       color: #a9a9a9;
+
       &:focus {
         outline-width: 0;
       }
       &[type=submit]{
         width: 40%;
+        padding-left: 0;
         height: 36px;
         background-color: #575555;
         font-size: 12px;
         color: #4FD0FC;
         border: 1px solid darkgrey;
-        &:hover{
+        text-align: center;
+        &:hover {
           background-color: #656565;
+        }
         }
       }
     }
     p {
       margin-top: 15px;
+      color: darkgrey;
       a {
         color: darkgrey;
         font-size: 12px;
@@ -139,4 +149,94 @@ footer {
       }
     }
   }
+.signup.page {
+  background: url('../img/backgrounds/index.jpeg') center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  form {
+    height: 550px;
+    border-radius: 25px;
+    text-align: center;
+    background-color: #575555;
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    width: 400px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.4);
+    transform: translate(-50%,-50%);
+    img{
+      margin-top: 50px;
+      width: 250px;
+      overflow: hidden;
+    }
+    input {
+      width: 80%;
+      height: 48px;
+      border-radius: 24px;
+      border: 1px solid darkgrey;
+      padding-left: 20px;
+      font-family: 'Francois One', sans-serif;
+      background-color: #575555;
+      color: #a9a9a9;
+
+      &:focus {
+        outline-width: 0;
+      }
+      &[type=submit]{
+        width: 40%;
+        padding-left: 0;
+        height: 36px;
+        background-color: #575555;
+        font-size: 12px;
+        color: #4FD0FC;
+        border: 1px solid darkgrey;
+        text-align: center;
+        &:hover {
+          background-color: #656565;
+        }
+      }
+    }
+  }
+  p {
+    margin-top: 15px;
+    color: darkgrey;
+    a {
+      color: darkgrey;
+      font-size: 12px;
+      text-decoration:underline;
+      &:hover{
+        color: white;
+      }
+    }
+  }
+}
+.about{
+main{
+  .image{
+    height: 100vh;
+    width: 100%;
+    background: url("../img/backgrounds/about.png") center center;
+    background-size: cover;
+    align-content: center;
+    p{
+      padding-top: 150px;
+      text-align: center;
+      font-size: 60px;
+      color: white;
+      text-shadow: 3px 3px black;
+    }
+  }
+  .info{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+    padding: 15px;
+    p{
+      border: 1px solid black;
+      width: 100%;
+      padding: 15px;
+      color: #575555;
+    }
+  }
+}
 }
