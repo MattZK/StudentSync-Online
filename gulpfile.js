@@ -22,18 +22,20 @@ const ts = require('gulp-typescript');
 
 gulp.task('serve', ['default'], () => {
   browserSync.init({ server: "./dist" });
-  gulp.watch('src/*.html', () => {gulp.src('*.html').pipe(gulp.dest('dist')).on('change', browserSync.reload)});
-  gulp.watch('src/scss/*.scss', () => {gulp.src('scss/*.scss').pipe(sourcemaps.init()).pipe(sass()).pipe(sourcemaps.write('./maps')).pipe(gulp.dest('dist/css')).pipe(browserSync.stream())});
-  gulp.watch('src/img/*', () => {gulp.src('img/*').pipe(gulp.dest('dist/img'))});
-  gulp.watch('src/js/*.js', () => {gulp.src('js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js')).on('change', browserSync.reload)});
-  gulp.watch('src/ts/*.ts', () => {gulp.src('ts/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js')).on('change', browserSync.reload)});
+  gulp.watch('src/*.html', () => {gulp.src('src/*.html').pipe(gulp.dest('dist'));browserSync.reload();});
+  gulp.watch('src/scss/*.scss', () => {gulp.src('src/scss/*.scss').pipe(sourcemaps.init()).pipe(sass()).pipe(sourcemaps.write('./maps')).pipe(gulp.dest('dist/css')).pipe(browserSync.stream())});
+  gulp.watch('src/img/*', () => {gulp.src('src/img/*').pipe(gulp.dest('dist/img'))});
+  //gulp.watch('src/js/*.js', () => {gulp.src('src/js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js')).on('change', browserSync.reload)});
+  //gulp.watch('src/bin/*.ts', () => {gulp.src('src/bin/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/bin'))});
+  gulp.watch('src/ts/*.ts', () => {gulp.src('src/ts/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js'));browserSync.reload();});
 });
 
 gulp.task('default', () => {
   gulp.src('src/*.html').pipe(gulp.dest('dist'));
   gulp.src('src/scss/*.scss').pipe(sourcemaps.init()).pipe(sass()).pipe(sourcemaps.write('./maps')).pipe(gulp.dest('dist/css'));
   gulp.src('src/img/*').pipe(gulp.dest('dist/img'));
-  gulp.src('src/js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js'));
+  //gulp.src('src/js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js'));
+  //gulp.src('src/bin/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/bin'));
   gulp.src('src/ts/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('dist/js'));
 });
 
@@ -41,6 +43,7 @@ gulp.task('build', () => {
   gulp.src('src/*.html').pipe(gulp.dest('build'));
   gulp.src('src/scss/*.scss').pipe(sass()).pipe(gulp.dest('build/css'));
   gulp.src('src/img/*').pipe(imagemin()).pipe(gulp.dest('build/img'));
-  gulp.src('src/js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('build/js'));
+  //gulp.src('src/js/*.js').pipe(babel({presets: ['env']})).pipe(gulp.dest('build/js'));
+  //gulp.src('src/bin/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('build/bin'));
   gulp.src('src/ts/*.ts').pipe(ts({noImplicitAny: true})).pipe(babel({presets: ['env']})).pipe(gulp.dest('build/js'));
 });

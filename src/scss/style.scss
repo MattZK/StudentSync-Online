@@ -1,0 +1,142 @@
+@import "reset";
+
+body {
+  font-family: Helvetica, sans-serif;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+header {
+  nav {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      width: 100%;
+      background-color: #575555;
+      li {
+        float: left;
+        width: 20%;
+        a {
+          display: block;
+          padding: 10px;
+          color: white;
+          text-align: center;
+          font-family: 'Francois One', sans-serif;
+          &:hover {
+            background-color: #4FD0FC;
+            color: white;
+            text-decoration-line: none;
+          }
+          &.brand {
+            padding: 0;
+            img {
+              padding: 4px;
+              max-height: 40px;
+            }
+            &:hover {
+              background: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  height: 64px;
+  background-color: #575555;
+  margin-top: 100px;
+  line-height: 64px;
+  text-align: center;
+  font-size: 2em;
+  a {
+    padding: 0 10px;
+    i {
+      line-height: 64px !important;
+      color: white;
+      &:hover {
+        color: rgba(255, 255, 255, .7);
+      }
+    }
+  }
+}
+
+.index.page {
+  h1, h2, h3 {
+    font-family: 'Francois One', sans-serif;
+  }
+  .jumbotron {
+    background: url('../img/backgrounds/index.png') top center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    p{
+      font-family: 'Francois One', sans-serif;
+      margin-top: 100px;
+    }
+  }
+  h3{
+    margin-top: 150px;
+  }
+}
+
+.login.page {
+  background: url('../img/backgrounds/login.jpg') center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+  form {
+    height: 450px;
+    border-radius: 10%;
+    text-align: center;
+    background-color: #575555;
+    position: absolute;
+    top: 50% ;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
+    img{
+      margin-top: 50px;
+      width: 250px;
+      overflow: hidden;
+    }
+    input {
+      width: 80%;
+      height: 48px;
+      border-radius: 24px;
+      border: 1px solid darkgrey;
+      padding-left: 20px;
+      font-family: 'Francois One', sans-serif;
+      background-color: #575555;
+      color: #a9a9a9;
+      &:focus {
+        outline-width: 0;
+      }
+      &[type=submit]{
+        width: 40%;
+        height: 36px;
+        background-color: #575555;
+        font-size: 12px;
+        color: #4FD0FC;
+        border: 1px solid darkgrey;
+        &:hover{
+          background-color: #656565;
+        }
+      }
+    }
+    p {
+      margin-top: 15px;
+      a {
+        color: darkgrey;
+        font-size: 12px;
+        text-decoration:underline;
+        &:hover{
+          color: white;
+        }
+      }
+    }
+  }
+}
