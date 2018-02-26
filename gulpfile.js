@@ -101,6 +101,7 @@ gulp.task('json:dist', () => {
 gulp.task('default', ['html:dev','php:dev','scss:dev','js:dev','ts:dev','img:dev','json:dev'], () => {
   browserSync.init({ server: "./dist" });
   gulp.watch(sources.html, ['html:dev']);
+  gulp.watch(sources.php, ['php:dev']);
   gulp.watch(sources.scss, ['scss:dev']);
   gulp.watch(sources.js, ['js:dev']);
   gulp.watch(sources.ts, ['ts:dev']);
