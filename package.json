@@ -27,6 +27,7 @@
     "gulp-sourcemaps": "",
     "gulp-typescript": "",
     "gulp-uglify": "",
+    "gulp-plumber": "",
     "typescript": ""
   }
 }
