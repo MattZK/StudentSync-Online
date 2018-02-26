@@ -37,7 +37,7 @@ const sources = {
   js: 'src/js/**/*.js',
   ts: 'src/ts/**/*.ts',
   json: 'src/**/*.json',
-  img: 'src/img/**/*.*'
+  img: ['src/img/**/*.*', '!src/img/**/*.afdesign']
 };
 
 //// Tasks
